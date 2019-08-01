@@ -28,11 +28,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false　index: true|
-|email|integer|null: false|
 
 ### Association
 - has_many :messages
-- has_many :groups, through :members
+- has_many :groups, through: :members
 - has_many :members
 
 ## messagesテーブル
@@ -57,7 +56,7 @@ Things you may want to cover:
 ### Association
 - has_many :members
 - has_many :messages
-- has_many :users, through :members
+- has_many :users, through: :members
 
 ## membersテーブル
 
