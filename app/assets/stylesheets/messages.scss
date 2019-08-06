@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .wrapper{
   width: 100vw;
   height: 100vh;
@@ -15,32 +20,37 @@
         justify-content: space-between;
         height: 100px;
         line-height: 100px;
-          &-name{
+          &__name{
             color: #FFFFFF;
             font-size: 16px;
             font-weight: bold;
           }
-          &-icon{
+          &__icon{
             color: #FFFFFF;
             display: flex;
-              &-edit{
+              &__edit{
+                  color: #FFFFFF;
               }
-              &-cog{
+              &__cog{
                 margin-left: 5px;
+                  color: #FFFFFF;
               }
           }
       }
-      &-bottom{
+      .chat-side-bottom{
         padding:0 20px;
         &-groups{
           color: #FFFFFF;
-          &-name{
-          font-size: 15px;
-          margin-bottom: 5px;
+          text-decoration: none;
+          &__name{
+            color: #FFFFFF;
+            font-size: 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
           }
-          &-message{
-          font-size: 11px;
-          margin-bottom: 40px;
+          &__message{
+            font-size: 11px;
+            margin-bottom: 40px;
           }
         }
       }
@@ -141,3 +151,4 @@
     }
   }
 }
+
