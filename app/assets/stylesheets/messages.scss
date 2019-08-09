@@ -121,6 +121,7 @@ a {
       padding: 20px 40px;
       &-box{
         display: flex;
+        position: relative;
         &-message{
           background-color: #fafafa;
           height: 50px;
@@ -128,10 +129,9 @@ a {
           padding: 0 40px 0 10px;
           color: #434a54;
           border-style: none;
-          position: relative;
           &-icon{
             position: absolute;
-            right: 10px;
+            right: 125px;
             bottom: 13px;
             input{
               display:none
