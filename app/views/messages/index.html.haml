@@ -4,35 +4,21 @@
     .chat-main-header
       .chat-main-header-left
         .chat-main-header-left-top
-          57期
+          = @group.name
         .chat-main-header-left-bottom
-          kkkkkkk: thanks thanks
+          Member: thanks thanks
       .chat-main-header-right
-        .chat-main-header-right-edit
-          edit
+        = link_to edit_group_path(@group) do
+          .chat-main-header-right-edit
+            edit
     .chat-main-message
-      .chat-main-message-box
-        .chat-main-message-box-upper
-          .chat-main-message-box-upper-info
-            samplesample
-          .chat-main-message-box-upper-date
-            日付け
-        .chat-main-message-box-text
-          hello!
-      .chat-main-message-box
-        .chat-main-message-box-upper
-          .chat-main-message-box-upper-info
-            samplesample
-          .chat-main-message-box-upper-date
-            日付け
-        .chat-main-message-box-text
-          hello!
+      = render @messages
     .chat-main-form
-      .chat-main-form-box
-        .chat-main-form-box-message
-          Type a message
-          %label.chat-main-form-box-message-icon
-            %input{:type => "file"}
-            = fa_icon "image"
-        .chat-main-form-box-send
-          send
+      = form_for [@group, @message] do |f|
+        .chat-main-form-box
+          = f.text_field :content, class: 'chat-main-form-box-message', placeholder: 'type a message'
+          .chat-main-form-box-message-icon
+            = f.label :image do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'chat-main-form-box-send'
