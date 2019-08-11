@@ -59,6 +59,7 @@ a {
     width: calc(100vw - 300px);
     background-color:#fafafa;
     &-header{
+      height: 90px;
       background-color: #ffffff;
       padding:0 40px;
       display: flex;
@@ -94,6 +95,7 @@ a {
       padding: 46px 40px;
       box-sizing: border-box;
       background-color: #fafafa;
+      overflow: scroll;
       &-box{
         margin-bottom: 40px;
         &-upper{
@@ -116,8 +118,9 @@ a {
     }
   }
     &-form{
+      box-sizing: border-box;
       background-color:#ddd;
-      height: 49px;
+      height: 90px;
       padding: 20px 40px;
       &-box{
         display: flex;
