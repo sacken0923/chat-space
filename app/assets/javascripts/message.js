@@ -47,6 +47,3 @@ $(document).on('turbolinks:load', function(){
     })
   })
 })
-
-
-// $('.messages').animate({scrollTop: $('.messages').get(0).scrollHeight}, 200, 'swing');
