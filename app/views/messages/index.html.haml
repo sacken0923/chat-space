@@ -6,7 +6,9 @@
         .chat-main-header-left-top
           = @group.name
         .chat-main-header-left-bottom
-          Member: thanks thanks
+          Member : 
+          - @group.users.each do |user|
+            = user.name
       .chat-main-header-right
         = link_to edit_group_path(@group) do
           .chat-main-header-right-edit
