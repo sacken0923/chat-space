@@ -38,12 +38,12 @@ $(function(){
             appendProduct(user);
           });
         }
-        // {
-        //   appendErrMsgToHTML("エラーだおーーー");
-        // }
+        {
+          appendErrMsgToHTML("一致するユーザーが見つかりません");
+        }
       })
       .fail(function() {
-        alert('一致するユーザーが見つかりません');
+        alert('error');
       })
       });
     $(document).on('click', '.user-search-add', function() {
