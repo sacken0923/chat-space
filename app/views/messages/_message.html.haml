@@ -1,4 +1,4 @@
-.chat-main-message-box
+.chat-main-message-box{"data-message-id": "#{message.id}"}
   .chat-main-message-box-upper
     .chat-main-message-box-upper-info
       = message.user.name
@@ -8,3 +8,5 @@
     .chat-main-message-box-text
       = message.content
   = image_tag message.image.url, class: "lower-message__image" if message.image.present?
+
+  -# 8行目の記述

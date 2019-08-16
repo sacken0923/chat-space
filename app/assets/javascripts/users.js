@@ -1,5 +1,4 @@
 $(function(){
-
   var search_list = $("#user-search-result");
   var select_list = $("#chat-group-users");
 
@@ -14,12 +13,12 @@ $(function(){
   }
 
   function selectUserNmae(user_id, user_name) {
-    var html = `<div class='chat-group-user'>
+    var remove_html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
     <input name='group[user_ids][]' type='hidden' value='${user_id}'>
     <p class='chat-group-user__name'>${user_name}</p>
     <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
   </div>`
-    select_list.append(html);
+    select_list.append(remove_html);
   }
 
       $("#user-search-field").on('keyup', function(){
@@ -39,14 +38,14 @@ $(function(){
             appendProduct(user);
           });
         }
-        else {
-          appendErrMsgToHTML("エラーだおーーー");
+        {
+          appendErrMsgToHTML("一致するユーザーが見つかりません");
         }
       })
       .fail(function() {
-        alert('エラー');
+        alert('error');
       })
-  });
+      });
     $(document).on('click', '.user-search-add', function() {
         var user_id = $(this).attr("data-user-id");
         var user_name = $(this).attr("data-user-name");
@@ -58,4 +57,6 @@ $(function(){
     $(this).parent().remove();
   })
 });
+
+// 16〜18行目の記述部分に注目
 

@@ -16,7 +16,7 @@
     .chat-main-message
       = render @messages
     .chat-main-form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], {id: 'new_message'} do |f|
         .chat-main-form-box
           = f.text_field :content, class: 'chat-main-form-box-message', placeholder: 'type a message'
           .chat-main-form-box-message-icon
